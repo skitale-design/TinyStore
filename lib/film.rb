@@ -10,7 +10,6 @@ class Film < Product
   end
 
   def to_s
-    puts "Цена: #{@price}, Количество: #{@amount} "\
-          "Название: #{@title}, Год: #{year}, Режиссер: #{director}"
+    "#{super} Название: #{@title}, Год: #{year}, Режиссер: #{director}"
   end
 end

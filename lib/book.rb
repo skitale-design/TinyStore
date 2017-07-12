@@ -10,8 +10,7 @@ class Book < Product
   end
 
   def to_s
-    puts "Цена: #{@price}, Количество: #{@amount} "\
-          "Название: #{@title}, Жанр: #{genre}, Автор: #{author}"
+    "#{super} Название: #{@title}, Жанр: #{genre}, Автор: #{author}"
   end
 end
 

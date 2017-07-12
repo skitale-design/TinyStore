@@ -8,6 +8,6 @@ class Product
   end
 
   def to_s
-    puts "Цена: #{@price}, Количество: #{@amount}"
+    "Цена: #{@price}, Количество: #{@amount}"
   end
 end

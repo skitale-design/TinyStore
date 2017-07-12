@@ -28,5 +28,5 @@ film = Film.new(
                 director: "А. Бортко"
                 )
 
-book.to_s
-film.to_s
+puts book
+puts film
