@@ -1,6 +1,5 @@
 class Product
-  # attr_reader :price, :quantity
-  attr_reader :price, :amount
+  attr_accessor :price, :amount
 
   def initialize(params)
     @price = params[:price]
@@ -9,5 +8,9 @@ class Product
 
   def to_s
     "Цена: #{@price}, Количество: #{@amount}"
+  end
+
+  def self.from_file(path)
+    raise NotImplementedError
   end
 end
