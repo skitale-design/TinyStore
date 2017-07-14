@@ -29,6 +29,7 @@ class Film < Product
                 amount: film_params[4].to_i
                 )
     end
+    puts "----> Film created!"
   end
 
 

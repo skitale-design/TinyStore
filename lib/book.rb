@@ -28,6 +28,7 @@ class Book < Product
                 amount: book_params[4].to_i
                 )
     end
+    puts "----> Book created!"
   end
 
 end

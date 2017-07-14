@@ -12,6 +12,7 @@ end
 require_relative 'lib/product'
 require_relative 'lib/book'
 require_relative 'lib/film'
+require_relative 'lib/product_collection'
 
 # book = Book.new(
 #                 price: 990,
@@ -35,17 +36,19 @@ require_relative 'lib/film'
 
 # puts book
 
+# ----------------------
+# path = "data"
+
+# book2 = Book.from_file("#{path}/book/0.txt")
+# film2 = Film.from_file("#{path}/film/0.txt")
+# puts book2
+# puts film2
+
+# begin
+# prod = Product.from_file("#{path}/film/0.txt")
+# rescue NotImplementedError => e
+#   puts "\n prod = Product.from_file(\"#{path}/film/0.txt\") -> Ошибка: #{e.message}"
+# end
 path = "data"
-
-book2 = Book.from_file("#{path}/book/0.txt")
-film2 = Film.from_file("#{path}/film/0.txt")
-puts book2
-puts film2
-
-begin
-prod = Product.from_file("#{path}/film/0.txt")
-rescue NotImplementedError => e
-  puts e.message
-end
-
-
+puts "----> path = #{path}"
+ProductCollection.from_dir(path)
