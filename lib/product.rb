@@ -7,7 +7,7 @@ class Product
   end
 
   def to_s
-    "Цена: #{@price}, Количество: #{@amount}"
+    "Цена: #{@price}, Кол-во: #{@amount}"
   end
 
   def self.from_file(path)

@@ -16,7 +16,11 @@ require_relative 'lib/product_collection'
 
 path = "data"
 
-puts ProductCollection.from_dir(path)[1].price
+product = ProductCollection.from_dir(path)
+puts "----------------"
+puts product.to_a[0]
+puts "----------------"
+puts product.sort_by_amount(0)
 
 
 
