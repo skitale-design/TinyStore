@@ -37,7 +37,7 @@ require_relative 'lib/product_collection'
 # puts book
 
 # ----------------------
-# path = "data"
+path = "data"
 
 # book2 = Book.from_file("#{path}/book/0.txt")
 # film2 = Film.from_file("#{path}/film/0.txt")
@@ -49,6 +49,6 @@ require_relative 'lib/product_collection'
 # rescue NotImplementedError => e
 #   puts "\n prod = Product.from_file(\"#{path}/film/0.txt\") -> Ошибка: #{e.message}"
 # end
-path = "data"
+
 puts "----> path = #{path}"
 ProductCollection.from_dir(path)

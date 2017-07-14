@@ -7,6 +7,7 @@ class Film < Product
     @title = params[:title]
     @year = params[:year]
     @director = params[:director]
+    puts "----> Film created!"
   end
 
   def to_s
@@ -29,7 +30,7 @@ class Film < Product
                 amount: film_params[4].to_i
                 )
     end
-    puts "----> Film created!"
+    # to_s
   end
 
 
