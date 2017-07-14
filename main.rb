@@ -14,30 +14,21 @@ require_relative 'lib/book'
 require_relative 'lib/film'
 require_relative 'lib/product_collection'
 
-# book = Book.new(
-#                 price: 990,
-#                 amount: 5,
-#                 title: "Идиот",
-#                 genre: "Классика",
-#                 author: "Ф. Достоевский"
-#                 )
-# film = Film.new(
-#                 price: 1000,
-#                 amount: 3,
-#                 title: "Тарас Бульба",
-#                 year: "2009",
-#                 director: "А. Бортко"
-#                 )
-
-# puts book
-# puts film
-
-# book.price = 800
-
-# puts book
-
-# ----------------------
 path = "data"
+
+puts ProductCollection.from_dir(path)[1].price
+
+
+
+
+
+
+
+
+
+
+
+
 
 # book2 = Book.from_file("#{path}/book/0.txt")
 # film2 = Film.from_file("#{path}/film/0.txt")
@@ -49,6 +40,3 @@ path = "data"
 # rescue NotImplementedError => e
 #   puts "\n prod = Product.from_file(\"#{path}/film/0.txt\") -> Ошибка: #{e.message}"
 # end
-
-puts "----> path = #{path}"
-ProductCollection.from_dir(path)

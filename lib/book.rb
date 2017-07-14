@@ -7,7 +7,6 @@ class Book < Product
     @title = params[:title]
     @genre = params[:genre]
     @author = params[:author]
-    puts "----> Book created!"
   end
 
   def to_s
@@ -15,7 +14,6 @@ class Book < Product
   end
 
   def self.from_file(path)
-    puts "-----> path = #{path}"
     book_params = []
     if File.exists?(path)
       file = File.new(path, "r:UTF-8")
@@ -30,7 +28,6 @@ class Book < Product
                 amount: book_params[4].to_i
                 )
     end
-    # self.to_s
   end
 
 end

@@ -7,13 +7,11 @@ class Film < Product
     @title = params[:title]
     @year = params[:year]
     @director = params[:director]
-    puts "----> Film created!"
   end
 
   def to_s
     "#{super} Название: #{@title}, Год: #{year}, Режиссер: #{director}"
   end
-
 
   def self.from_file(path)
     film_params = []
@@ -30,7 +28,6 @@ class Film < Product
                 amount: film_params[4].to_i
                 )
     end
-    # to_s
   end
 
 
