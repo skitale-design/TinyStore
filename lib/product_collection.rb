@@ -8,6 +8,7 @@ class ProductCollection
     array = []
     @hash_for_classes = {
                           "data/book" => Book,
+                          "data/disk" => Disk,
                           "data/film" => Film
                         }
                           # book: {dir: "book", class: Book}
@@ -51,8 +52,5 @@ class ProductCollection
     when 1 then @array.sort_by!{|e| e.public_send(param)}
     end
   end
-
-
-
 end
 

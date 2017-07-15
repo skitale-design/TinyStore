@@ -10,7 +10,7 @@ class Film < Product
   end
 
   def to_s
-    "#{super} Название: #{@title}, Год: #{year}, Режиссер: #{director}"
+    " #{@title}, #{year}, Режиссер - #{director}, #{super}"
   end
 
   def self.from_file(path)
@@ -29,6 +29,4 @@ class Film < Product
                 )
     end
   end
-
-
 end

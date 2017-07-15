@@ -10,7 +10,7 @@ class Book < Product
   end
 
   def to_s
-    "#{super} Название: #{@title}, Жанр: #{genre}, Автор: #{author}"
+    "#{@title}, #{genre}, автор - #{author}, #{super}"
   end
 
   def self.from_file(path)
@@ -29,6 +29,5 @@ class Book < Product
                 )
     end
   end
-
 end
 
