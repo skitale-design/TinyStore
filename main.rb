@@ -18,49 +18,17 @@ require_relative 'lib/product_collection'
 
 path = "data"
 
-# product = ProductCollection.from_dir(path)
-# ProductCollection.from_dir(path)
-# puts "----------------"
-# puts product.to_a[0]
-# puts "----------------"
-
-# Вывести список доступных товаров
-# puts product.sort_by_amount(0)
 kass = Kass.new(path)
 loop do
-  # system "cls"
+  system "cls"
+  puts "\n--- Что бы вы хотели купить? Мы можем вам предложить:\n\n"
   kass.show_list_of_goods
   puts "0. Выход\n\n"
   kass.show_cart
   puts "\nСумма: #{kass.total}"
   user_input = STDIN.gets.chomp
   break if user_input == "0"
-  kass.add_to_cart(user_input.to_i-1)
+  item_number = user_input.to_i.abs - 1
+  kass.add_to_cart(item_number)
 end
 puts "\nС вас #{kass.total} руб."
-# Запросить номер товара, который хочется купить
-# Создать объект класса Kass и передать ему номер товара
-# Вывести
-
-
-
-
-
-
-
-
-
-
-
-
-
-# book2 = Book.from_file("#{path}/book/0.txt")
-# film2 = Film.from_file("#{path}/film/0.txt")
-# puts book2
-# puts film2
-
-# begin
-# prod = Product.from_file("#{path}/film/0.txt")
-# rescue NotImplementedError => e
-#   puts "\n prod = Product.from_file(\"#{path}/film/0.txt\") -> Ошибка: #{e.message}"
-# end

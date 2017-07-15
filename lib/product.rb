@@ -7,7 +7,7 @@ class Product
   end
 
   def to_s
-    "#{@price} руб., осталось (#{@amount})"
+    "#{@price} руб. осталось (#{@amount})"
   end
 
   def self.from_file(path)

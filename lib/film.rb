@@ -10,7 +10,7 @@ class Film < Product
   end
 
   def to_s
-    " #{@title}, #{year}, Режиссер - #{director}, #{super}"
+    "#{@title}, #{year}, Режиссер - #{director}, #{super}"
   end
 
   def self.from_file(path)
