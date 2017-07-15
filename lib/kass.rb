@@ -1,4 +1,3 @@
-require_relative 'product_collection'
 class Kass
   def initialize(path)
     @cart = []
@@ -12,7 +11,7 @@ class Kass
                      when "Disk" then "Диск"
                      when "Film" then "Фильм"
                      end
-      puts "#{index+1} #{product_type} #{element.to_s}\n\n"
+      puts "#{index + 1} #{product_type} #{element}\n\n"
     end
   end
   # Добавить товар в корзину
