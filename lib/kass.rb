@@ -9,10 +9,10 @@ class Kass
   def show_list_of_goods
     @products.each_with_index do |element, index|
       product_type = case element.class.to_s
-                      when "Book" then "Книга"
-                      when "Disk" then "Диск"
-                      when "Film" then "Фильм"
-                      end
+                     when "Book" then "Книга"
+                     when "Disk" then "Диск"
+                     when "Film" then "Фильм"
+                     end
       puts "#{index+1} #{product_type} #{element.to_s}\n\n"
     end
   end
