@@ -1,6 +1,5 @@
 require_relative 'product_collection'
 class Kass
-
   def initialize(path)
     @cart = []
     @products = ProductCollection.from_dir(path).sort_by_price!(1).to_a
