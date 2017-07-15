@@ -29,7 +29,7 @@ class Kass
   # Показать товары в корзине
   def show_cart
     puts "--- Ваши покупки:"
-    @cart.each_with_index {|element,i| puts "#{i+1} #{element.to_s}"}
+    @cart.each_with_index {|element,i| puts "#{i + 1} #{element}"}
   end
   # Посчитать сумму всех товаров в корзине
   def total
